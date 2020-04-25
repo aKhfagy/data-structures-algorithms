@@ -1,32 +1,41 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <set>
 #include <cassert>
 #include <algorithm>
 
 using std::cin;
 using std::string;
 using std::vector;
+using std::multiset;
 using std::cout;
 using std::max_element;
 
 class StackWithMax {
     vector<int> stack;
+    multiset <int, std::greater<int>> st;
 
-  public:
+public:
 
     void Push(int value) {
         stack.push_back(value);
+        st.insert(value);
     }
 
     void Pop() {
         assert(stack.size());
+        st.erase(st.find(stack.back()));
         stack.pop_back();
     }
 
     int Max() const {
         assert(stack.size());
-        return *max_element(stack.begin(), stack.end());
+        //for (auto i : st) {
+        //    cout << i << ' ';
+        //}
+        //puts("");
+        return *st.begin();
     }
 };
 
