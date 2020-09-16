@@ -1,7 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <queue>
+#include <limits>
 
 using std::vector;
+using std::queue;
+using std::numeric_limits;
 
 /* This class implements a bit unusual scheme for storing edges of the graph,
  * in order to retrieve the backward edge for a given edge quickly. */
@@ -69,9 +73,55 @@ FlowGraph read_data() {
     return graph;
 }
 
+vector <int> compute_Gf(const FlowGraph& graph, int s, int t) {
+    // This function performs BFS
+
+    vector<int> parent(graph.size(), -1);
+    queue<int> frontire;
+
+    frontire.push(s);
+
+    while (!frontire.empty()) {
+        int node = frontire.front();
+        frontire.pop();
+
+        for (auto id : graph.get_ids(node)) {
+            const FlowGraph::Edge& e = graph.get_edge(id);
+
+            if (parent[e.to] == -1 && e.capacity > e.flow && e.to != s) {
+                parent[e.to] = id;
+                frontire.push(e.to);
+            }
+        }
+    }
+    
+    return parent;
+}
+
 int max_flow(FlowGraph& graph, int from, int to) {
     int flow = 0;
-    /* your code goes here */
+    
+    vector<int> parent;
+
+    do {
+        int min = numeric_limits<int>::max();
+
+        parent = compute_Gf(graph, from, to);
+
+        if(parent[to] != -1) {
+            
+            for (int u = parent[to]; u != -1; u = parent[graph.get_edge(u).from]) 
+                min = std::min(min, 
+                graph.get_edge(u).capacity - graph.get_edge(u).flow);
+            
+            flow += min;
+
+            for (int u = parent[to]; u != -1; u = parent[graph.get_edge(u).from]) 
+                graph.add_flow(u, min);
+        }
+
+    } while(parent[to] != -1);
+
     return flow;
 }
 
