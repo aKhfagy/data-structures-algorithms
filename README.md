@@ -10,6 +10,13 @@ This repository contains the material I used for this specialization.
   - [Advanced Algorithms and Complexity](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/Advanced%20Algorithms%20and%20Complexity).
 
 
+### Certificates
+  - [Algorithms Toolbox's Certificate](https://www.coursera.org/account/accomplishments/certificate/M5MBQ2ZANTQ6).
+  - [Data Structures's Certificate](https://www.coursera.org/account/accomplishments/certificate/FVXY4569SY7G).
+  - [Algorithms on Graphs's Certificate](https://www.coursera.org/account/accomplishments/certificate/PRBGPR3KDJLF).
+  - [Algorithms on Strings's Certificate](https://www.coursera.org/account/accomplishments/certificate/FKYYWU9PYAMH).
+
+
 ### N.B.
   - All the assigments were done in C++.
   - The problems that are not present in this repo I have not solved them.
