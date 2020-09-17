@@ -9,5 +9,10 @@ This repository contains the material I used for this specialization.
   - [Algorithms on Strings](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/Algorithms%20on%20Strings).
   - [Advanced Algorithms and Complexity](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/Advanced%20Algorithms%20and%20Complexity).
 
+
+### N.B.
+  - All the assigments were done in C++.
+  - The problems that are not present in this repo I have not solved them.
+
 # Creative Commons Zero v1.0 Universal 
 My work in this specialization is licensed under the CC0 v1.0 universial license, for more information you can see it [here](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/blob/master/LICENSE).
