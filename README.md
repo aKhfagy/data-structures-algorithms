@@ -57,5 +57,6 @@ This repository contains the material I used for this specialization.
   - If you wish to use the problems outside of coursera you're free to use them. 
   - Don't use these problems to submit in the specialization as it violates the [Coursera Honor Code](https://learner.coursera.help/hc/en-us/articles/209818863-Coursera-Honor-Code).
 
-# Creative Commons Zero v1.0 Universal 
-My work in this specialization is licensed under the CC0 v1.0 universial license, for more information you can see it [here](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/blob/master/LICENSE).
+# Creative Commons Zero v1.0 Universal
+[![CC0](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/cc-zero.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+![Public Domain](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/publicdomain.png)
