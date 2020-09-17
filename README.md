@@ -8,6 +8,7 @@ This repository contains the material I used for this specialization.
   - [Algorithms on Graphs](https://www.coursera.org/learn/algorithms-on-graphs?specialization=data-structures-algorithms).
   - [Algorithms on Strings](https://www.coursera.org/learn/algorithms-on-strings?specialization=data-structures-algorithms).
   - [Advanced Algorithms and Complexity](https://www.coursera.org/learn/advanced-algorithms-and-complexity).
+  - [Genome Assembly Programming Challenge](https://www.coursera.org/learn/assembling-genomes).
 
 
 ### Certificates
