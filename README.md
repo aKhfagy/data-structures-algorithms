@@ -51,6 +51,7 @@ This repository contains the material I used for this specialization.
 - #### [Advanced Algorithms and Complexity](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/Advanced%20Algorithms%20and%20Complexity).
    - [Slides and Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/Advanced%20Algorithms%20and%20Complexity/slides%20and%20assigments).
    - [Flows in Networks](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/Advanced%20Algorithms%20and%20Complexity/week1_flows_in_networks).
+   - [NP-completeness](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/Advanced%20Algorithms%20and%20Complexity/week3_np-completeness).
 
 ### N.B.
   - All the assigments were done in C++.
