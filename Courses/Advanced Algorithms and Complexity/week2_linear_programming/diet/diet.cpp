@@ -4,6 +4,8 @@
 #include <vector>
 #include <cstdio>
 #include <bitset>
+#include <limits>
+#include <iomanip>
 
 const double EPS = 1e-3;
 const long double INF = 1.0e+9;
@@ -15,8 +17,8 @@ typedef vector<ld> Row;
 typedef vector<Row> Matrix;
 
 struct Equation {
-	Equation(const Matrix &a, const Column &b) : a(a),
-												 b(b) {}
+	Equation(const Matrix& a, const Column& b) : a(a),
+		b(b) {}
 
 	Matrix a;
 	Column b;
@@ -24,16 +26,16 @@ struct Equation {
 
 struct Position {
 	Position(int column, int row) : column(column),
-									row(row) {}
+		row(row) {}
 
 	int column;
 	int row;
 };
 
 Position SelectPivotElement(
-	const Matrix &a,
-	vector<bool> &used_rows,
-	vector<bool> &used_columns) {
+	const Matrix& a,
+	vector<bool>& used_rows,
+	vector<bool>& used_columns) {
 	// This algorithm selects the first free element.
 	Position pivot_element(0, 0);
 	while (used_rows[pivot_element.row])
@@ -55,16 +57,16 @@ Position SelectPivotElement(
 }
 
 void SwapLines(
-	Matrix &a, Column &b,
-	vector<bool> &used_rows,
-	Position &pivot_element) {
+	Matrix& a, Column& b,
+	vector<bool>& used_rows,
+	Position& pivot_element) {
 	swap(a[pivot_element.column], a[pivot_element.row]);
 	swap(b[pivot_element.column], b[pivot_element.row]);
 	swap(used_rows[pivot_element.column], used_rows[pivot_element.row]);
 	pivot_element.row = pivot_element.column;
 }
 
-void ProcessPivotElement(Matrix &a, Column &b, const Position &pivot_element) {
+void ProcessPivotElement(Matrix& a, Column& b, const Position& pivot_element) {
 	int sz = a.size();
 	ld div = a[pivot_element.row][pivot_element.column];
 
@@ -83,14 +85,14 @@ void ProcessPivotElement(Matrix &a, Column &b, const Position &pivot_element) {
 }
 
 void MarkPivotElementUsed(
-	const Position &pivot_element,
-	vector<bool> &used_rows,
-	vector<bool> &used_columns) {
+	const Position& pivot_element,
+	vector<bool>& used_rows,
+	vector<bool>& used_columns) {
 	used_rows[pivot_element.row] = true;
 	used_columns[pivot_element.column] = true;
 }
 
-int back_substitution(Matrix &a, Column &b) {
+int back_substitution(Matrix& a, Column& b) {
 	int size = a.size();
 	for (int i = size - 1; i; --i) {
 		ld temp = b[i];
@@ -103,8 +105,8 @@ int back_substitution(Matrix &a, Column &b) {
 }
 
 pair<int, Column> SolveEquation(Equation equation) {
-	Matrix &a = equation.a;
-	Column &b = equation.b;
+	Matrix& a = equation.a;
+	Column& b = equation.b;
 	int size = a.size();
 
 	if (size == 0)
@@ -114,7 +116,7 @@ pair<int, Column> SolveEquation(Equation equation) {
 	vector<bool> used_rows(size, false);
 	for (int step = 0; step < size; ++step) {
 		Position pivot_element = SelectPivotElement(a, used_rows, used_columns);
-		if(a[pivot_element.row][pivot_element.column] == 0)
+		if (a[pivot_element.row][pivot_element.column] == 0)
 			break;
 		SwapLines(a, b, used_rows, pivot_element);
 		ProcessPivotElement(a, b, pivot_element);
@@ -127,154 +129,154 @@ pair<int, Column> SolveEquation(Equation equation) {
 }
 
 vector<vector<int>> get_subsets(const vector<int>& set, int m) {
-    const int n = 1 << set.size();
-    vector<vector<int>> subsets;
-    bitset<32> bits;
+	const int n = 1 << set.size();
+	vector<vector<int>> subsets;
+	bitset<32> bits;
 
-    for (int i = 0; i < n; ++i) {
-        bits = bits.to_ulong() + 1l;
-        vector<int> subset;
+	for (int i = 0; i < n; ++i) {
+		bits = bits.to_ullong() + 1ll;
+		vector<int> subset;
 
-        int ctr = 0;
-        for (int j = 0; j < set.size(); ++j) {
+		int ctr = 0;
+		for (int j = 0; j < set.size(); ++j) {
 
-            if (bits[set.size() - 1 - j]) {
-                subset.push_back(set[j]);
+			if (bits[set.size() - 1 - j]) {
+				subset.push_back(set[j]);
 				++ctr;
-                if (ctr > m) {
-                    break;
-                }
-            }
-        }
+				if (ctr > m) {
+					break;
+				}
+			}
+		}
 
-        if (ctr == m) {
-            subsets.emplace_back(move(subset));
-        }
-    }
+		if (ctr == m) {
+			subsets.emplace_back(move(subset));
+		}
+	}
 
-    return subsets;
+	return subsets;
 }
 
 vector<Column> solve_all_equations(
-	int m, 
-	const Matrix& A, 
+	int m,
+	const Matrix& A,
 	const Column& b) {
-    vector<Column> solutions;
-    vector<int> nums(A.size());
+	vector<Column> solutions;
+	vector<int> nums(A.size());
 
-    int s = 0;
-    generate(nums.begin(), nums.end(), [&s] {
-		 return s++; 
-		 });
-    auto subsets = get_subsets(nums, m);
+	int s = 0;
+	generate(nums.begin(), nums.end(), [&s] {
+		return s++;
+		});
+	auto subsets = get_subsets(nums, m);
 
-    if (A.size() == 1) {
-        subsets.emplace_back(0);
-    }
+	if (A.size() == 1) {
+		subsets.emplace_back(0);
+	}
 
-    for (const auto& subset : subsets) {
+	for (const auto& subset : subsets) {
 
-        Matrix matrix;
-        Column column;
+		Matrix matrix;
+		Column column;
 
-        for (auto j : subset) {
-            matrix.push_back(A[j]);
-            column.push_back(b[j]);
-        }
+		for (auto j : subset) {
+			matrix.push_back(A[j]);
+			column.push_back(b[j]);
+		}
 
-        Equation eq( move(matrix), move(column) );
+		Equation eq(move(matrix), move(column));
 
-        pair<int, Column> code_and_sol = SolveEquation(eq);
+		pair<int, Column> code_and_sol = SolveEquation(eq);
 
-        if (code_and_sol.first == 0 && !code_and_sol.second.empty()) {
-            solutions.emplace_back(move(code_and_sol.second));
-        }
-    }
+		if (code_and_sol.first == 0 && !code_and_sol.second.empty()) {
+			solutions.emplace_back(move(code_and_sol.second));
+		}
+	}
 
-    return solutions;
+	return solutions;
 }
 
 inline void prepare(int& n, const int m, Matrix& A, vector<ld>& b) {
-    while (n < m) {
-        A.emplace_back(m, 0);
-        b.emplace_back(0);
-        ++n;
-    }
+	while (n < m) {
+		A.emplace_back(m, 0);
+		b.emplace_back(0);
+		++n;
+	}
 
-    A.emplace_back(vector<ld>(m, 1));
-    b.emplace_back(INF);
-    ++n;
+	A.emplace_back(vector<ld>(m, 1));
+	b.emplace_back(INF);
+	++n;
 
-    for (int k = 0; k < m; ++k) {
-        vector<ld> temp(m, 0.0);
-        temp[k] = -1;
-        A.emplace_back(move(temp));
-        b.emplace_back(-0.0);
-        ++n;
-    }
+	for (int k = 0; k < m; ++k) {
+		vector<ld> temp(m, 0.0);
+		temp[k] = -1;
+		A.emplace_back(move(temp));
+		b.emplace_back(-0.0);
+		++n;
+	}
 }
 
 pair<int, vector<ld>> solve_diet_problem(
-	int n, 
-	int m, 
-	Matrix A, 
-	Column b, 
+	int n,
+	int m,
+	Matrix A,
+	Column b,
 	vector<ld> c) {
-    prepare(n, m, A, b);
-    vector<Column> solutions = solve_all_equations(m, A, b);
+	prepare(n, m, A, b);
+	vector<Column> solutions = solve_all_equations(m, A, b);
 
-    if (solutions.size() == 0) {
-        return { -1, {} };
-    }
+	if (solutions.size() == 0) {
+		return { -1, {} };
+	}
 
-    int idx = -1;
-    ld largest_pleasure = -(numeric_limits<ld>::max() / 2);
+	int idx = -1;
+	ld largest_pleasure = -(numeric_limits<ld>::max() / 2);
 
-    for (int i = 0; i < solutions.size(); ++i) {
+	for (int i = 0; i < solutions.size(); ++i) {
 
-        auto& sol = solutions[i];
-        bool satisfied = true;
+		auto& sol = solutions[i];
+		bool satisfied = true;
 
-        for (int j = 0; j < n; ++j) {
+		for (int j = 0; j < n; ++j) {
 
-            ld constraint = b[j];
-            ld sum = 0.0;
+			ld constraint = b[j];
+			ld sum = 0.0;
 
-            for (int k = 0; k < m; ++k) {
-                sum += A[j][k] * sol[k];
-            }
+			for (int k = 0; k < m; ++k) {
+				sum += A[j][k] * sol[k];
+			}
 
-            if (sum - constraint > EPS) {
-                satisfied = false;
-                break;
-            }
-        }
+			if (sum - constraint > EPS) {
+				satisfied = false;
+				break;
+			}
+		}
 
-        ld pleasure = 0.0;
-        for (int k = 0; k < m; ++k) {
-            pleasure += sol[k] * c[k];
-        }
+		ld pleasure = 0.0;
+		for (int k = 0; k < m; ++k) {
+			pleasure += sol[k] * c[k];
+		}
 
-        if (satisfied && pleasure > largest_pleasure) {
-            largest_pleasure = pleasure;
-            idx = i;
-        }
-    }
+		if (satisfied && pleasure > largest_pleasure) {
+			largest_pleasure = pleasure;
+			idx = i;
+		}
+	}
 
-    if (idx == -1) {
-        return { -1, {} };
-    }
+	if (idx == -1) {
+		return { -1, {} };
+	}
 
-    auto& sol = solutions[idx];
+	auto& sol = solutions[idx];
 	ld accumulate = 0.0;
-	for(auto x : sol) {
+	for (auto x : sol) {
 		accumulate += x;
 	}
-    if (accumulate + EPS >= INF) {
-        return { 1, {} };
-    }
+	if (accumulate + EPS >= INF) {
+		return { 1, {} };
+	}
 
-    return { 0, move(sol) };
+	return { 0, move(sol) };
 }
 
 int main() {
