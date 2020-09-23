@@ -1,4 +1,4 @@
-#include <ios>
+#include <cstdio>
 #include <iostream>
 #include <vector>
 
@@ -19,13 +19,19 @@ struct ConvertGSMNetworkProblemToSat {
     {  }
 
     void printEquisatisfiableSatFormula() {
-        // This solution prints a simple satisfiable formula
-        // and passes about half of the tests.
-        // Change this function to solve the problem.
-        cout << "3 2" << endl;
-        cout << "1 2 0" << endl;
-        cout << "-1 -2 0" << endl;
-        cout << "1 -2 0" << endl;
+        
+        cout << (3 * edges.size() + numVertices) << ' ' << (numVertices * 3) << '\n';
+
+        int ctr = 1;
+
+        while(numVertices--) {
+            cout << ctr++ << ' ' << ctr++ << ' ' << ctr++ << " 0\n";
+        }
+
+        for (const Edge& e : edges) {
+            for(int i = 1; i <= 3; ++i)
+                cout << -((e.from - 1) * 3 + i) << ' ' << -((e.to - 1) * 3 + i) << " 0\n";
+        }
     }
 };
 
