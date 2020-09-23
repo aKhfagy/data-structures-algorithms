@@ -41,6 +41,7 @@ This repository contains the material I used for this specialization.
    - [Paths 1](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/week3_paths1).
    - [Paths 2](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/week4_paths2).
    - [Minimum Spanning Tree](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/week5_mst).
+   - [Advanced Shortest Paths](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/Advanced-Shortest-Paths).
 
 - #### [Algorithms on Strings](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/011%20-%20Algorithms%20on%20Strings).
    - [Slides and Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/011%20-%20Algorithms%20on%20Strings/slides%20and%20assigments).
@@ -53,6 +54,7 @@ This repository contains the material I used for this specialization.
    - [Flows in Networks](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week1_flows_in_networks).
    - [Linear Programming](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week2_linear_programming).
    - [NP-completeness](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week3_np-completeness).
+   - [Coping with NP-completeness](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week4_coping_with_np_completeness).
 
 ### N.B.
   - All the assigments were done in C++.
