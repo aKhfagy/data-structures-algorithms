@@ -55,6 +55,7 @@ This repository contains the material I used for this specialization.
    - [Linear Programming](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week2_linear_programming).
    - [NP-completeness](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week3_np-completeness).
    - [Coping with NP-completeness](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week4_coping_with_np_completeness).
+   - [Streaming Algorithms](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/Streaming%20Algorithms).
 
 ### N.B.
   - All the assigments were done in C++.
