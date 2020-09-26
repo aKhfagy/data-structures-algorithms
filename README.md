@@ -57,6 +57,10 @@ This repository contains the material I used for this specialization.
    - [Coping with NP-completeness](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week4_coping_with_np_completeness).
    - [Streaming Algorithms](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/Streaming%20Algorithms).
 
+- #### [Genome Assembly Programming Challenge](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/101%20-%20Genome%20Assembly%20Programming%20Challenge).
+   - [slides and assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/101%20-%20Genome%20Assembly%20Programming%20Challenge/slides%20and%20assigments).
+   - [Overlap Graphs](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/101%20-%20Genome%20Assembly%20Programming%20Challenge/week1).
+
 ### N.B.
   - All the assigments were done in C++.
   - If you wish to use the problems outside of coursera you're free to use them. 
