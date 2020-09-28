@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
+#include <algorithm>
 
 struct Vertex {
     int weight;
@@ -7,6 +9,8 @@ struct Vertex {
 };
 typedef std::vector<Vertex> Graph;
 typedef std::vector<int> Sum;
+using std::max;
+using ll = long long;
 
 Graph ReadTree() {
     int vertices_count;
@@ -27,48 +31,52 @@ Graph ReadTree() {
     return tree;
 }
 
-void dfs(const Graph &tree, int vertex, int parent) {
-    for (int child : tree[vertex].children)
-        if (child != parent)
-            dfs(tree, child, vertex);
+int dfs(const Graph &tree, int vertex, int parent, std::vector<ll>& sum) {
+    
+    const Vertex& here = tree[vertex];
 
-    // This is a template function for processing a tree using depth-first search.
-    // Write your code here.
-    // You may need to add more parameters to this function for child processing.
+    if(sum[vertex] == -1) {
+        if(here.children.size() == 0) {
+            sum[vertex] = here.weight;
+        }
+        else {
+
+            ll m1 = here.weight;
+            for(int child : here.children) {
+                if(child == parent)
+                    continue;
+                for(int grandchildren : tree[child].children){
+                    if(grandchildren != vertex) {
+                        m1 += dfs(tree, grandchildren, child, sum);
+                    }
+                }
+            }
+
+            ll m0 = 0;
+            for(int child : here.children) {
+                if(child != parent) {
+                    m0 += dfs(tree, child, vertex, sum);
+                }
+            }
+
+            sum[vertex] = max(m1, m0);
+        }
+    }
+
+    return sum[vertex];
 }
 
 int MaxWeightIndependentTreeSubset(const Graph &tree) {
     size_t size = tree.size();
     if (size == 0)
         return 0;
-    dfs(tree, 0, -1);
-    // You must decide what to return.
-    return 0;
+    
+    std::vector<ll> sum = std::vector<ll>(size, -1);
+
+    return dfs(tree, 0, -1, sum);
 }
 
 int main() {
-    // This code is here to increase the stack size to avoid stack overflow
-    // in depth-first search.
-    const rlim_t kStackSize = 64L * 1024L * 1024L;  // min stack size = 64 Mb
-    struct rlimit rl;
-    int result;
-    result = getrlimit(RLIMIT_STACK, &rl);
-    if (result == 0)
-    {
-        if (rl.rlim_cur < kStackSize)
-        {
-            rl.rlim_cur = kStackSize;
-            result = setrlimit(RLIMIT_STACK, &rl);
-            if (result != 0)
-            {
-                fprintf(stderr, "setrlimit returned result = %d\n", result);
-            }
-        }
-    }
-
-    // Here begins the solution
-    Graph tree = ReadTree();
-    int weight = MaxWeightIndependentTreeSubset(tree);
-    std::cout << weight << std::endl;
-    return 0;
+    const Graph graph = ReadTree();
+    std::cout << MaxWeightIndependentTreeSubset(graph);
 }
