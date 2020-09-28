@@ -16,6 +16,7 @@ This repository contains the material I used for this specialization.
   - [Data Structures's Certificate](https://www.coursera.org/account/accomplishments/certificate/FVXY4569SY7G).
   - [Algorithms on Graphs's Certificate](https://www.coursera.org/account/accomplishments/certificate/PRBGPR3KDJLF).
   - [Algorithms on Strings's Certificate](https://www.coursera.org/account/accomplishments/certificate/FKYYWU9PYAMH).
+  - [Advanced Algorithms and Complexity's Certificate](https://www.coursera.org/account/accomplishments/certificate/JJHNJJLUGPEW).
   
 
 ### Content
