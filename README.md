@@ -24,7 +24,7 @@ This repository contains the material I used for this specialization.
 
 
 - #### [Algorithms Toolbox](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/000%20-%20Algorithms%20Toolbox).
-   - [Slides and Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/000%20-%20Algorithms%20Toolbox/assigments).
+   - [Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/001%20-%20Algorithms%20Toolbox/assigments).
    - [Programming Challenges](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/000%20-%20Algorithms%20Toolbox/week1_programming_challenges).
    - [Algorithmic Warmup](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/000%20-%20Algorithms%20Toolbox/week2_algorithmic_warmup).
    - [Greedy Algorithms](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/000%20-%20Algorithms%20Toolbox/week3_greedy_algorithms).
@@ -34,7 +34,7 @@ This repository contains the material I used for this specialization.
 
 
 - #### [Data Structures](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/001%20-%20Data%20Structures).
-   - [Slides and Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/001%20-%20Data%20Structures/assigments).
+   - [Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/001%20-%20Data%20Structures/assigments).
    - [Basic Data Structures](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/001%20-%20Data%20Structures/week1_basic_data_structures).
    - [Priority Queues and Disjoint Sets](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/001%20-%20Data%20Structures/week2_priority_queues_and_disjoint_sets).
    - [Hash Tables](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/001%20-%20Data%20Structures/week3_hash_tables).
@@ -42,7 +42,7 @@ This repository contains the material I used for this specialization.
 
 
 - #### [Algorithms on Graphs](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs).
-   - [Slides and Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/assigments)
+   - [Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/assigments)
    - [Decomposition 1](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/week1_decomposition1).
    - [Decomposition 2](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/week2_decomposition2).
    - [Paths 1](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/010%20-%20Algorithms%20on%20Graphs/week3_paths1).
@@ -52,14 +52,14 @@ This repository contains the material I used for this specialization.
 
 
 - #### [Algorithms on Strings](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/011%20-%20Algorithms%20on%20Strings).
-   - [Slides and Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/011%20-%20Algorithms%20on%20Strings/assigments).
+   - [Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/011%20-%20Algorithms%20on%20Strings/assigments).
    - [Suffix Trees](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/011%20-%20Algorithms%20on%20Strings/week1_suffix_trees).
    - [Burrows Wheeler Transform and Suffix Arrays](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/011%20-%20Algorithms%20on%20Strings/week2_BWT_suffix_arrays).
    - [Knuth Morris Pratt and Suffix Array and Suffix Tree](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/011%20-%20Algorithms%20on%20Strings/week3_4_kmp_suffix_array_suffix_tree).
 
 
 - #### [Advanced Algorithms and Complexity](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity).
-   - [Slides and Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/assigments).
+   - [Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/assigments).
    - [Flows in Networks](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week1_flows_in_networks).
    - [Linear Programming](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week2_linear_programming).
    - [NP-completeness](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/100%20-%20Advanced%20Algorithms%20and%20Complexity/week3_np-completeness).
@@ -68,7 +68,7 @@ This repository contains the material I used for this specialization.
 
 
 - #### [Genome Assembly Programming Challenge](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/101%20-%20Genome%20Assembly%20Programming%20Challenge).
-   - [slides and assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/101%20-%20Genome%20Assembly%20Programming%20Challenge/assigments).
+   - [Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/101%20-%20Genome%20Assembly%20Programming%20Challenge/assigments).
    - [Overlap Graphs](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/101%20-%20Genome%20Assembly%20Programming%20Challenge/week1).
 
 ### N.B.
