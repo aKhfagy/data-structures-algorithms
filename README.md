@@ -69,7 +69,8 @@ This repository contains the material I used for this specialization.
 
 - #### [Genome Assembly Programming Challenge](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge).
    - [Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge/assigments).
-   - [Overlap Graphs](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge/week1).
+   - [Overlap graph](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge/week1).
+   - [De Bruijn graph](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge/week2).
 
 ### N.B.
   - All the assigments were done in C++.
