@@ -15,8 +15,10 @@ This repository contains the material I used for this specialization.
   - [Algorithms Toolbox's Certificate](https://www.coursera.org/account/accomplishments/certificate/M5MBQ2ZANTQ6).
   - [Data Structures's Certificate](https://www.coursera.org/account/accomplishments/certificate/FVXY4569SY7G).
   - [Algorithms on Graphs's Certificate](https://www.coursera.org/account/accomplishments/certificate/PRBGPR3KDJLF).
-  - [Algorithms on Strings's Certificate](https://www.coursera.org/account/accomplishments/certificate/FKYYWU9PYAMH).
+  - [Algorithms on Strings' Certificate](https://www.coursera.org/account/accomplishments/certificate/FKYYWU9PYAMH).
   - [Advanced Algorithms and Complexity's Certificate](https://www.coursera.org/account/accomplishments/certificate/JJHNJJLUGPEW).
+  - [Genome Assembly Programming Challenge](https://www.coursera.org/account/accomplishments/certificate/VDHJ6499NMXN).
+  - [Specialization Certificate](https://www.coursera.org/account/accomplishments/specialization/certificate/JVCA55PMTPEN).
   
 
 ### Content
@@ -71,10 +73,11 @@ This repository contains the material I used for this specialization.
    - [Assigments](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge/assigments).
    - [Overlap graph](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge/week1).
    - [De Bruijn graph](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge/week2).
+   - [Genome Assembly Faces Real Sequencing Data](https://github.com/aKhfagy/Data-Structures-and-Algorithms-Specialization/tree/master/Courses/110%20-%20Genome%20Assembly%20Programming%20Challenge/week3)
 
 ### N.B.
-  - All the assigments were done in C++.
-  - If you wish to use the problems outside of coursera you're free to use them. 
+  - All the assignments were done in C++.
+  - If you wish to use the problems outside of Coursera you're free to use them. 
   - Don't use these problems to submit in the specialization as it violates the [Coursera Honor Code](https://learner.coursera.help/hc/en-us/articles/209818863-Coursera-Honor-Code).
 
 # Creative Commons Zero v1.0 Universal
